@@ -13,8 +13,8 @@ const app = express();
 
 //config cors
 const allowedOrigins = [
-  'https://li-cloud-web-app.web.app/',
-  'http://localhost:5173/',
+  'https://li-cloud-web-app.web.app',
+  'http://localhost:5173',
 ];
 app.use(
   cors({
