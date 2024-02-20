@@ -44,3 +44,11 @@ export const getCurrentData = async (
     res.status(500).send(new RespondDTO(500, "Internal Server Error"));
   }
 };
+
+export const getTest = async (
+  req: express.Request,
+  res: express.Response
+) => {
+  console.log("tested");
+  res.status(200).send(new RespondDTO(200, "Success",  " Done "));
+};

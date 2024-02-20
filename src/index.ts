@@ -6,7 +6,6 @@ import compression from 'compression';
 import cors from 'cors';
 import WeatherRoutes from './routes/WeatherRoutes';
 require("dotenv").config();
-// import UserRoutes from './src/routes/UserRoutes';
 
 //invoke express
 const app = express();
@@ -18,8 +17,7 @@ const allowedOrigins = [
 ];
 app.use(
   cors({
-    origin: allowedOrigins,
-    credentials: true,
+    credentials:true
   })
 );
 
@@ -32,6 +30,7 @@ app.use(bodyParser.json());
 
 // app.use('/api/user', UserRoutes);
 app.use('/api/weather',WeatherRoutes);
+app.use('/api/test',WeatherRoutes);
 
 //-----------------------------------------------------------------------------
 
