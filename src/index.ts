@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import compression from 'compression';
 import cors from 'cors';
+import WeatherRoutes from './routes/WeatherRoutes';
 require("dotenv").config();
 // import UserRoutes from './src/routes/UserRoutes';
 
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 //--------------------Set Routes-----------------------------------------------
 
 // app.use('/api/user', UserRoutes);
+app.use('/api/weather',WeatherRoutes);
 
 //-----------------------------------------------------------------------------
 
