@@ -1,15 +1,25 @@
 import RespondDTO from "../dtos/RespondDTO";
 import express from "express";
 require("dotenv").config();
+import axios from 'axios';
 
 export const getCurrentData = async (
   req: express.Request,
   res: express.Response
 ) => {
   try {
+
+    const lat = 6.7230;
+    const lon = 80.0647;
     
-    console.log(req.body);
+    // Make a GET request to OpenWeatherMap API using axios
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_API_KEY}`);
+    
+    // Log the response data
+    console.log(response.data);
+
     res.status(200).send(new RespondDTO(200, "Done"));
+
   } catch (error) {
     console.error(error);
 
