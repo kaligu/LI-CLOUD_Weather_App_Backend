@@ -8,3 +8,5 @@ npm start
 
 # After go to Frontend **Before You need run Backend rest Api via localhost**
 https://li-cloud-web-app.web.app/
+
+Backend Stack - ExpressJS, Nodemon, Typescript, NodeJS
