@@ -1,11 +1,13 @@
 import RespondDTO from "../dtos/RespondDTO";
 import express from "express";
+require("dotenv").config();
 
 export const getCurrentData = async (
   req: express.Request,
   res: express.Response
 ) => {
   try {
+    
     console.log(req.body);
     res.status(200).send(new RespondDTO(200, "Done"));
   } catch (error) {
