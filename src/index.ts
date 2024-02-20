@@ -5,15 +5,15 @@ import cookieParser from 'cookie-parser'
 import compression from 'compression';
 import cors from 'cors';
 require("dotenv").config();
-import UserRoutes from './src/routes/UserRoutes';
+// import UserRoutes from './src/routes/UserRoutes';
 
 //invoke express
 const app = express();
 
 //config cors
 const allowedOrigins = [
-  'https://jur-ni.web.app',
-  'http://localhost:5173',
+  'https://li-cloud-web-app.web.app/',
+  'http://localhost:5173/',
 ];
 app.use(
   cors({
@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 
 //--------------------Set Routes-----------------------------------------------
 
-app.use('/api/user', UserRoutes);
+// app.use('/api/user', UserRoutes);
 
 //-----------------------------------------------------------------------------
 
